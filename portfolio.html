@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Caiden's Amazing Website</title>
+        <style>
+            body {
+                background: rgb(35, 75, 48);
+                color: rgb(45, 45, 45);
+                padding: 10px;
+                font-family: cursive;
+            }
+            #all-contents {
+              max-width: 800px;
+                margin: auto;
+            }
+         
+            /* navigation menu */
+            nav {
+                background: rgb(0, 0, 0);
+               margin: 0 auto;
+               margin-bottom:20px;
+                display: flex;
+                padding: 10px;
+                border-radius:100px;
+            }
+            h1 {
+                display: flex;
+                align-items: center;
+                color: rgb(255, 255, 255);
+                flex: 1;
+                margin: 0;
+            }
+            #nav-ul {
+                list-style-image: none;
+            }
+            .nav-li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+         
+            /* main container area beneath menu */
+            main {
+                background: rgb(238, 222, 175);
+                display: flex;
+            }
+            .sidebar {
+                margin-right: 25px;
+                padding: 10px;
+            
+            }
+            .sidebar-img {
+                width: 350px;
+                border: rgb(255, 255, 255) ridge;
+                border-radius: 500px;
+            }
+            .content {
+                flex: 1;
+                padding: 15px;
+            }
+            #interests {
+                border: 5px rgb(0, 0, 0) ridge;
+                padding: 100px;
+            }
+            h3 {
+                margin: 0px;
+            }
+            h2{
+                margin: 0px;
+            }
+            /* portfolio styles */
+         .content h1 {
+             color: black;
+         }
+
+         #portfolio {
+             list-style-type: none;
+             padding-left: 0;
+         }
+
+         #portfolio li {
+             background: #fff;
+             padding: 10px;
+             border-radius: 10px;
+             margin-bottom: 10px;
+         }
+
+         #portfolio li:hover {
+             background: #eee;
+         }
+
+         #portfolio a {
+             text-decoration: none;
+             color: #454545;
+         }
+         </style>
+    </head>
+
+    <body>
+        <!--all content goes here-->
+        <div id="all contents">  
+            <nav>
+                <h1>Caiden's Website</h1>
+                <ul id="nav-ul">
+                    <li class="nav-li">
+                        <a href="index.html">Home </a>
+                    </li>
+                    <li class="nav-li">
+                        <a href="portfolio">Portforlio</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <main>
+                <div class="content">
+                    <h1>Portfolio</h1>
+                    <ul id="portfolio">
+                        <li><a href="projects/platformer/">Platformer : A cannon - dodging, collectible - grabbing adventure game for Halleb0t</a></li>
+                        <li><a href="projects/bouncing-box/">Bouncing Box : A project that gives you a taste of game development on the web </a></li>
+                        <li><a href="projects/circularity/">Circularity : A motion poem using random number generation and velocity applied to circle shapes...</a></li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
