@@ -14,5 +14,8 @@
         game.load.image('kennedi', './asset/collectable/kennedi-head.png');
         game.load.image('max', './asset/collectable/max-head.png');
         game.load.atlas('halle', './asset/halle/phaser-json-array/halle.png', './asset/halle/phaser-json-array/halle.json');
+        game.load.image('silver', './asset/collectable/key.png');
+        game.load.image('heart', './asset/collectable/heart.png');
+        game.load.image('gold', './asset/collectable/gold-key.png');
     };
 })(window);
