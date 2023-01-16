@@ -42,8 +42,13 @@
     createPlatform(210, 500, 0.5, 0.7);// third lowest
     createPlatform(10, 450, 0.5);//fourth lowest
     createPlatform(750, 450, 0.1, 7);//pillar
-    createPlatform(425, 435, 0.4, 0.5);//fifth lowest 
-    createPlatform(200, 365, 0.4, 0.1); //top platform
+    createPlatform(435, 435, 0.5, 0.5);//fifth lowest 
+    createPlatform(200, 365, 0.4, 0.1); //sixth lowest
+    createPlatform(13, 320, 0.4, 0.6);//seventh lowest
+    createPlatform(410, 300, 0.6, 0.6 );// eight lowest
+    createPlatform(700, 250, 0.5, 0.5);//ninth lowest
+    createPlatform(350, 160, 0.5, 0.5);//tenth lowest
+    createPlatform(100, 110, 0.2, 0.3);//highest
     // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////
   }
