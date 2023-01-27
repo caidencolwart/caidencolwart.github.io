@@ -5,17 +5,28 @@
 	<title>Bouncing Box</title>
 	<script src="jquery.min.js"></script>
 	<style>
+		body {
+			background-image: url("paper.gif");
+			background-color: rgb(218, 132, 34);
+			-webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+
+
+		}
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: rgb(137, 15, 207);
+			color: rgb(255, 255, 255);
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
 			display: block;
 			position: absolute;
 			top: 100px;
-			left: 0px;  /* <--- Change me! */
+			left: 100px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
@@ -48,8 +59,9 @@
 			box.on('click', handleBoxClick);
 
 			// moves the Box to a new position on the screen along the X-Axis
-			function moveBoxTo(newPositionX) {
+			function moveBoxTo(newPositionX, newpositionY) {
 				box.css("left", newPositionX);
+				box.css('top', newpositionY);
 			}
 
 			// changes the text displayed on the Box
@@ -63,6 +75,18 @@
 			
 			// TODO 2 - Variable declarations 
 			
+			var positionX = 0;
+			var positionY = 0;
+			var points = 0;
+			var speed = 10;
+			var speedY = 10;
+			var boardHeight = jQuery(window).height();
+			var randNumX = Math.random() *100;
+			var randNumY = Math.random() *100;
+			var color1;
+			var color2;
+			var color3;
+			
 
 			
 			/* 
@@ -70,7 +94,27 @@
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
+
+			// We want to increase the value of position x by 10
 			function update() {
+				
+				moveBoxTo(positionX, positionY);
+				positionX += speed;
+				positionY += speedY;
+
+				// moves x
+				if ( positionX > boardWidth -70) {
+					speed = -speed;
+				} else if ( positionX < 0) {
+					speed = -speed;
+				}
+
+				// moves y
+				if ( positionY > boardHeight -70) {
+					speedY = -speedY;
+				} else if ( positionY < 0) {
+					speedY = -speedY;
+				}
 				
 
 			};
@@ -81,10 +125,41 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
+				positionX = randNumX;
+				positionY = randNumY;
+				
+				points = points + 1;
+
+				changeBoxText(points);
+
+				if ( speed > 0 ) {
+					speed = speed + 3;
+				} else if ( speed < 0) {
+					speed = speed - 3;
+				}
+
+				randNumX = Math.random() *boardWidth; //random X when clicked
+				randNumY = Math.random() *boardHeight; //random Y when clicked
+
+				getRandomColor();
+
+			};
+
+			
+			// changes box color to random
+			function getRandomColor() {
+				var colorStr = 'rgb(color1 , color2 , color3)';
+				box.css('background-color', colorStr);
+
+				var color1 = Math.random(0, 255) *100;
+				var color3 = Math.random(0, 255) *100;
+				var color3 = Math.random(0, 255) *100;
 				
 
 
 			};
+
+
 		})();
 	</script>
 </body>
