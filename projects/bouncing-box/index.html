@@ -141,24 +141,23 @@
 				randNumX = Math.random() *boardWidth; //random X when clicked
 				randNumY = Math.random() *boardHeight; //random Y when clicked
 
-				getRandomColor();
+				
 
 			};
 
 			
 			// changes box color to random
 			function getRandomColor() {
-				var colorStr = 'rgb(color1 , color2 , color3)';
+				var colorStr = 'rgb(color1 + "," + color2 + "," + color3)';
 				box.css('background-color', colorStr);
 
-				var color1 = Math.random(0, 255) *100;
-				var color3 = Math.random(0, 255) *100;
-				var color3 = Math.random(0, 255) *100;
+				var color1 = Math.random() *255;
+				var color3 = Math.random() *255;
+				var color3 = Math.random() *255;
 				
-
-
+				
 			};
-
+				
 
 		})();
 	</script>
