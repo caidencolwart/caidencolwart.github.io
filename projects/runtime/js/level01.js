@@ -197,7 +197,7 @@ var level01 = function (window) {
 
         }
         
-
+        //iterates over the array levelData.gameItems
         for ( var i = 0; i < levelData.gameItems.length; i++) {
             var gameItem = levelData.gameItems[i];
 
