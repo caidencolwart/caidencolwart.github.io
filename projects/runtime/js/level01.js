@@ -74,7 +74,7 @@ var level01 = function (window) {
         // TODO 6 and on go here
         // BEGIN EDITING YOUR CODE HERE
         
-        
+        //function that creates a sawblade
         function createSawBlade(x, y) {
             var hitZoneSize = 25; //assigns a value of 25 to the hit zone
             var damageFromObstacle = 10; //assings a value as the damage of the obstacle
@@ -88,7 +88,7 @@ var level01 = function (window) {
             obstacleImage.y = -25; //assings a value to the y position of obstacle image
         }
         
-        
+        // function that creates a spike
         function createSpike (x, y) {
             var hitZoneSize = 15; //assigns a value of 25 to the hit zone
             var damageFromObstacle = 20; //assings a value as the damage of the obstacle
@@ -102,6 +102,7 @@ var level01 = function (window) {
             obstacleImage.y = -15; //assings a value to the y position of obstacle image
         }
 
+        //function that creates a bush
         function createBush (x, y) {
             var hitZoneSize = 15; //assigns a value of 15 to the hit zone
             var damageFromObstacle = 10; //assings a value as the damage of the obstacle
@@ -116,9 +117,7 @@ var level01 = function (window) {
         }
 
         
-        
-     
-
+        //function that creates a enemny
         function createEnemny (x, y,) {
 
             var enemy = game.createGameItem("enemy", 25,);
@@ -147,7 +146,7 @@ var level01 = function (window) {
 
         }
 
-
+        //function that creates enemy 2
         function createEnemny2 (x, y,) {
 
             var enemy2 = game.createGameItem("enemy2", 25,);
@@ -177,7 +176,7 @@ var level01 = function (window) {
         }
        
 
-
+        //function that creates a reward
         function createReward (x, y) {
             var reward = game.createGameItem("reward", 25); 
             var gameItem = draw.bitmap("img/ruby.png"); //draws the image and stores it in the variable gameItem
